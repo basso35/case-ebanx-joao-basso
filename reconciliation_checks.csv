@@ -1,0 +1,10 @@
+conferência,valor_a,valor_b,ok
+Linhas bronze → silver (lançamentos),89566.0,89566.0,True
+Linhas bronze → silver (eventos),18548.0,18548.0,True
+USD silver = USD fact_pnl,41860.16,41860.16,True
+TPV silver = TPV fact_tpv,5183194.81,5183194.81,True
+"GP = Net Revenue + Cost of Sales (24 meses, oficial)",47767.83,47767.83,True
+Updated − Official (meses fechados) = postagens tardias,-2400.0,-2400.0,True
+Oficial B01 = Oficial B01+B02,47767.83,47767.83,True
+Soma dos países = total (GP oficial),47767.83,47767.83,True
+Soma dos merchants + não atribuído = total (GP oficial),47767.83,47767.83,True

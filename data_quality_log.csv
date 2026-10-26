@@ -1,0 +1,12 @@
+id,problema,tabela,registros,tratamento,impacto_usd,efeito
+DQ01,Lançamentos duplicados (entry_id e todos os campos idênticos),financial_entries (B01),427,Removidos. Mantida uma ocorrência por entry_id,180.56,"Sem tratamento, jul/26 teria receita e custos inflados (GP líquido indicado)"
+DQ02,Câmbio COP de mar/25 com casa decimal deslocada (10×),fx_rates,672,Taxa dividida por 10. Original preservada em usd_per_unit_original,250315.83,"TPV de mar/25 superestimado no valor indicado; GP superestimado em 3,536.24"
+DQ03,Lançamentos sem currency_code,financial_entries,170,Moeda imputada pelo país (100% de aderência nos demais lançamentos),1534.98,Receita que seria perdida na conversão para USD
+DQ04,Conta Z900 sem regra no account_mapping,financial_entries,6,Fora do GP; reportada como UNMAPPED abaixo da P&L,-3600.0,"Se for custo de venda, o GP de jun–ago/26 estaria superestimado no valor indicado"
+DQ05,Lançamento postado após o cutoff de mês fechado,financial_entries (B02),1,Fora da visão oficial; incluído na visão atualizada,-2400.0,GP atualizado de ago/26 menor que o oficial no valor indicado
+DQ06,Mudança de regra: C120 (Platform costs) passa de DIRECT para INDIRECT em jan/26,account_mapping,7156,Classificação conforme regra vigente; série pró-forma comparável na análise,-3515.86,Custos diretos caem a partir de jan/26 sem mudança econômica. GP não muda
+DQ07,"Lançamentos sem merchant (C200, R120, C190)",financial_entries,102,Mantidos na P&L como UNATTRIBUTED; fora do ranking de merchants,-27408.0,Diferença entre GP total e soma do GP por merchant
+DQ08,"Eventos fora do TPV (REFUND, PENDING, CANCELLED)",payment_events,1418,Excluídos do TPV conforme regra,352761.77,Volume que não entra no TPV
+DQ09,"Evento pontual: incentivo contratual R120 (mai/26, MX, sem merchant)",financial_entries,1,Mantido; destacado como não recorrente,3000.0,Eleva o GP de mai/26
+DQ10,Resultado de FX favorável (C300 positivo) concentrado em mar/26,financial_entries,123,Mantido (regra permite custo positivo); destacado como não recorrente,374.04,Eleva o GP de mar/26
+DQ11,Set/26 aberto e parcial (dados até 20/09),payment_events / financial_entries,3204,Sem visão oficial; usado só em leituras atualizadas e com ressalva,92.33,GP parcial de set/26 (até 20/09). Não comparar com meses completos
